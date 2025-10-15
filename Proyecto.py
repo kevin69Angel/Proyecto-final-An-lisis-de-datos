@@ -41,6 +41,58 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+#presentación
+st.markdown(
+    """
+    <div style="text-align: center; padding: 5px;">
+        <h1 style="color:#701705;">Proyecto de Análisis de Datos grupo #1</h1>
+        <h4 style="margin-top: -5px;">DyRET Integrantes:</h4>
+        <p style="font-size:16px; margin-top: 10px;">
+            <b>Fuente:</b> Kevin angel, Maria Paula Iglesias, Esteban Mendez, Maria Cristina Hernandez. 
+        </p>
+        <p style=" font-size:16px;">
+            <b>Talento Tech</b> 
+        </p>
+            <p style=" font-size:16px;">
+            <b>Análisis de Datos - Explorador </b> 
+        </p>
+        <hr style="width:60%; margin: 20px auto;">
+        <p style="text-align: justify; max-width: 700px; margin: 0 auto; font-size:16px">
+        Análisis de datos Explorador - G203P
+        </p>
+            </p>
+            <p style=" font-size:16px;">
+            <b>Octubre del 2025</b> 
+        </p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+# Introduccion
+st.markdown(
+    """
+    <div style="text-align: center; padding: 5px;">
+        <h3 style="color:#701705;">Introducción y planteamiento del problema #1</h3>
+        <p style="font-size:16px; margin-top: 10px;">
+            <b>Contexto:</b> el presente proyecto se basa en el análisis del conjunto de datos “DyRET Quadruped Locomotion Dataset”, disponible públicamente en el repositorio de CSIRO Data Portal, el cual nos proporciona un dataset con la recopilación de los datos de una prueba realizada en Brisbane, Australia, en noviembre de 2019 donde se realizaron mediciones en diferentes superficies de dos tipos de sensores (IMU y RAW) en el robot cuadrúpedo DyRET, esta prueba se realizó sobre 6 superficies diferentes a 6 velocidades diferentes.
+        </p>
+        <p style=" font-size:15px;">
+            <b>Importancia:</b> Este análisis contribuye al desarrollo de robots más eficientes y adaptativos, capaces de desplazarse en entornos irregulares, lo cual tiene aplicaciones en
+        </p>
+        <ul>Exploración de terrenos difíciles (energías renovables, minería, agricultura de precisión).</ul>
+        <ul>Inspección de infraestructuras en zonas de difícil acceso.</ul>
+        <ul>Avances en inteligencia artificial aplicada al control de movimiento.</ul>
+        <p> Problema específico identificado</p>
+        <p> Preguntas de investigación</p>
+        </p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
 #TITULO PRINCIPAL
 st.markdown(
     """
@@ -110,7 +162,7 @@ folium.Marker(
     popup=f'Marcador en {ciudad}',
     tooltip='Haz clic aquí'
 ).add_to(mapa)
-map_html = mapa._repr_html_()
+map_html = mapa.repr_html()
 st.components.v1.html(map_html, height=500)
 
 
@@ -124,21 +176,21 @@ st.markdown("""
     gap: 40px;">
     <div style="flex:1;text-align:justify;"
         <p><strong style="font-size: 25px">🦾 Sensores</strong></p>
-        <p style="margin-bottom:5px;">- *Raw:* Sensor de 3 ejes en cada pata (Optoforce OMD-20-SH-80N).</p>
-        <p style="margin-bottom:30px;">- *IMU:* Giroscopio, acelerómetro y magnetómetro de 3 ejes (Xsens MTI-30).</p>
+        <p style="margin-bottom:5px;">- Raw: Sensor de 3 ejes en cada pata (Optoforce OMD-20-SH-80N).</p>
+        <p style="margin-bottom:30px;">- IMU: Giroscopio, acelerómetro y magnetómetro de 3 ejes (Xsens MTI-30).</p>
         <p><strong style="font-size: 25px">🌍 Superficies</strong></p>
         <p style="margin-bottom:30px;">Hormigón, césped, grava, mulch, tierra, arena.</p>
         <p><strong style="font-size: 25px">⚙ Velocidades y pasoss</strong></p>
-        <p>- *Velocidades:* </p>
+        <p>- Velocidades: </p>
         <p style="margin-bottom:5px;">0–1: 0.125 Hz, 2–3: 0.1875 Hz, 4–5: 0.25 Hz.</p>
-        <p style="margin-bottom:5px;">- *Longitudes de paso:* </p> 
+        <p style="margin-bottom:5px;">- Longitudes de paso: </p> 
         <p style="margin-bottom:30px;">0, 2, 4 → 80 mm; 1, 3, 5 → 120 mm.</p>
     </div>
     <div style="flex:1;text-align:justify;"
         <p><strong style="font-size: 25px">🧩 Metadatos</strong></p>
-        <p style="margin-bottom:5px;">- *Licencia:* Creative Commons 4.0</p>  
-        <p style="margin-bottom:5px;">- *Actualizaciones:* No.</p>  
-        <p style="margin-bottom:30px;">- *Recolección:* 10 pruebas por archivo, 8 pasos cada una, en todas las superficies y velocidades (total: 2880 pasos).</p> 
+        <p style="margin-bottom:5px;">- Licencia: Creative Commons 4.0</p>  
+        <p style="margin-bottom:5px;">- Actualizaciones: No.</p>  
+        <p style="margin-bottom:30px;">- Recolección: 10 pruebas por archivo, 8 pasos cada una, en todas las superficies y velocidades (total: 2880 pasos).</p> 
         <p><strong style="font-size: 25px">🔬 Uso del dataset</strong></p>
         <p style="margin-bottom:5px;">- Validación de modelos cinemáticos/dinámicos.</p>  
         <p style="margin-bottom:30px;">- Clasificación de terreno mediante señales de contacto.</p>
