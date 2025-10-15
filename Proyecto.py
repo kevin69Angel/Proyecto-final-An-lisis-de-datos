@@ -162,7 +162,7 @@ folium.Marker(
     popup=f'Marcador en {ciudad}',
     tooltip='Haz clic aquí'
 ).add_to(mapa)
-map_html = mapa.repr_html()
+map_html = mapa._repr_html_()
 st.components.v1.html(map_html, height=500)
 
 
