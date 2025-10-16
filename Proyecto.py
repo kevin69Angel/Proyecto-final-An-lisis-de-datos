@@ -44,61 +44,138 @@ st.set_page_config(
 #presentación
 st.markdown(
     """
-    <div style="text-align: center; padding: 5px;">
-        <h1 style="color:#701705;">Proyecto de Análisis de Datos grupo #1</h1>
-        <h4 style="margin-top: -5px;">DyRET Integrantes:</h4>
-        <p style="font-size:16px; margin-top: 10px;">
-            <b>Fuente:</b> Kevin angel, Maria Paula Iglesias, Esteban Mendez, Maria Cristina Hernandez. 
+    <div style="text-align: center; padding: 35px;">
+        <h1 style="color:#701705;font-size:75px;margin-bottom: -45px">Proyecto de Análisis de Datos</h1>
+        <h1 style="color:#701705;font-size:55px">grupo #1</h1>
+        <p style=" font-size:25px; margin-top: 5px">
+        <b>Integrantes:</b> 
         </p>
-        <p style=" font-size:16px;">
+        <p style="font-size:21px; margin-top: -17px;">
+         Kevin angel, Maria Paula Iglesias, Esteban Mendez, Maria Cristina Hernandez. 
+        </p>
+        <p style=" font-size:23px; margin-top: 8px">
             <b>Talento Tech</b> 
+        </p>    
+                <p style=" font-size:21px ; margin-top: -20px ; margin-bottom: 10px;">
+        Análisis de Datos - Explorador 
         </p>
-            <p style=" font-size:16px;">
-            <b>Análisis de Datos - Explorador </b> 
+        <p style=" font-size:21px ; margin-top: -15px ; margin-bottom: 10px;">
+        Análisis de Datos Explorador - G203P
         </p>
-        <hr style="width:60%; margin: 20px auto;">
-        <p style="text-align: justify; max-width: 700px; margin: 0 auto; font-size:16px">
-        Análisis de datos Explorador - G203P
-        </p>
-            </p>
-            <p style=" font-size:16px;">
-            <b>Octubre del 2025</b> 
+        <p style=" font-size:21px; margin-bottom: 40px;">
+        <b>Octubre del 2025</b> 
         </p>
     </div>
     """,
     unsafe_allow_html=True
 )
 
+st.divider()
 
 # Introduccion
 st.markdown(
     """
-    <div style="text-align: center; padding: 5px;">
-        <h3 style="color:#701705;">Introducción y planteamiento del problema #1</h3>
-        <p style="font-size:16px; margin-top: 10px;">
-            <b>Contexto:</b> el presente proyecto se basa en el análisis del conjunto de datos “DyRET Quadruped Locomotion Dataset”, disponible públicamente en el repositorio de CSIRO Data Portal, el cual nos proporciona un dataset con la recopilación de los datos de una prueba realizada en Brisbane, Australia, en noviembre de 2019 donde se realizaron mediciones en diferentes superficies de dos tipos de sensores (IMU y RAW) en el robot cuadrúpedo DyRET, esta prueba se realizó sobre 6 superficies diferentes a 6 velocidades diferentes.
+    <div style="text-align: left; padding: 5px;">
+        <h1 style="margin-bottom: 20px">Introducción y planteamiento del problema</h1>
+        <h4>Contexto:</h4>
+        <p style="font-size:16px; margin-top: 8px;">
+         El presente proyecto se basa en el análisis del conjunto de datos “DyRET Quadruped Locomotion Dataset”, disponible públicamente en el repositorio de CSIRO Data Portal, el cual nos proporciona un dataset con la recopilación de los datos de una prueba realizada en Brisbane, Australia, en noviembre de 2019 donde se realizaron mediciones en diferentes superficies de dos tipos de sensores (IMU y RAW) en el robot cuadrúpedo DyRET, esta prueba se realizó sobre 6 superficies diferentes a 6 velocidades diferentes.
         </p>
+        <p></p>        
+        <h4>Importancia:</h4>
         <p style=" font-size:15px;">
-            <b>Importancia:</b> Este análisis contribuye al desarrollo de robots más eficientes y adaptativos, capaces de desplazarse en entornos irregulares, lo cual tiene aplicaciones en
+        Este análisis contribuye al desarrollo de robots más eficientes y adaptativos, capaces de desplazarse en entornos irregulares, lo cual tiene aplicaciones en:
         </p>
-        <ul>Exploración de terrenos difíciles (energías renovables, minería, agricultura de precisión).</ul>
-        <ul>Inspección de infraestructuras en zonas de difícil acceso.</ul>
-        <ul>Avances en inteligencia artificial aplicada al control de movimiento.</ul>
-        <p> Problema específico identificado</p>
-        <p> Preguntas de investigación</p>
-        </p>
+        <ul>
+            <li>Exploración de terrenos difíciles (energías renovables, minería, agricultura de precisión).</li>
+            <li>Inspección de infraestructuras en zonas de difícil acceso.</li>
+            <li>Avances en inteligencia artificial aplicada al control de movimiento.</li>    
+        </ul>
+        <h4>Problema específico identificado</h4>
+        <h4>Preguntas de investigación</h4>
     </div>
     """,
     unsafe_allow_html=True
 )
+
+st.divider()
+
+# Objetivos
+st.markdown(
+    """
+    <div style="text-align: left; padding: 5px;">
+        <h1 style="margin-bottom: 20px">Objetivos</h1>
+        <h4>Objetivo general:</h4>
+        <p style="font-size:16px; margin-top: 8px;">
+         Analizar la relación existente entre la fuerza ejercida por las patas del robot y las características de la superficie sobre la que se desplaza, considerando las variaciones de velocidad y tipo de terreno.
+        </p>
+        <h4>Objetivos específicos:</h4>
+        <ul>
+            <li>Comparar las fuerzas realizadas por cada pata y la relación que hay entre ellas durante la marcha.</li>
+            <li>Examinar el comportamiento de los componentes de la fuerza (Fx, Fy, Fz) en distintas muestras del sensor raw.</li>
+            <li>Definir una hipótesis respecto a la existencia de datos atípicos.</li>    
+        </ul>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+st.divider()
+
+
+# Metodología
+st.markdown(
+    """
+    <div style="text-align: left; padding: 5px;">
+        <h1 style="margin-bottom: 20px">Metodología</h1>
+        <h4>Diseño de la investigación:</h4>
+        <p style="font-size:16px; margin-bottom: -0px;">
+            <p>El presente proyecto se desarrolló bajo un diseño de investigación aplicada y descriptiva, con enfoque cuantitativo, orientado al análisis, interpretación y visualización de datos provenientes de un conjunto de información (dataset) seleccionado de acuerdo con la temática del curso.</p>
+            <p>El propósito principal fue extraer conocimientos relevantes a partir de datos reales mediante técnicas de análisis y minería de datos, el proceso metodológico se estructuró en las siguientes etapas:</p>
+            <ol>
+                <li>Búsqueda y selección del dataset:</li>
+                    <p style="margin-left: 22px;">Se identificó y seleccionó una fuente de datos pertinente al tema de estudio, asegurando su calidad y disponibilidad para el análisis.</p>
+                <li>Análisis inicial del tema y exploración de los datos:</li>
+                    <p style="margin-left: 22px;">Se realizó una comprensión general y una exploración preliminar de las variables contenidas en el dataset, con el fin de reconocer patrones, valores faltantes y posibles relaciones.</p>
+                <li>Organización y limpieza de los datos:</li>    
+                    <p style="margin-left: 22px;">Se aplicaron procesos de depuración, transformación y normalización de la información, eliminando registros duplicados, corrigiendo inconsistencias y estandarizando formatos.</p>
+                <li>Minería y análisis de datos:</li>
+                    <p style="margin-left: 22px;">Se implementaron técnicas estadísticas y de análisis para identificar tendencias, correlaciones y comportamientos significativos dentro del conjunto de datos.</p>
+                <li>Visualización y graficación:</li>
+                    <p style="margin-left: 22px;">A través de herramientas de análisis de datos se generaron gráficos e indicadores visuales que facilitaron la interpretación de los resultados obtenidos.</p>
+                <li>Conclusiones y recomendaciones:</li> 
+                    <p style="margin-left: 22px;">Con base en el análisis realizado, se establecieron conclusiones que resumen los hallazgos más relevantes y se formularon recomendaciones orientadas a la mejora de procesos o la toma de decisiones fundamentadas en datos.</p>
+            <p>En conjunto, este diseño permitió desarrollar un proceso integral de análisis de datos, desde la adquisición hasta la interpretación final, aplicando las buenas prácticas de la analítica y fortaleciendo las competencias en el uso de herramientas tecnológicas y metodológicas del análisis de información.</p>
+            </ol>
+        </p>     
+        <h4>Fuentes de datos:</h4>
+        <p>Los datos utilizados en este proyecto provienen del conjunto de datos público “DyRET Hexapod Locomotion Data”, disponible en el portal de acceso abierto del **Commonwealth Scientific and Industrial Research Organisation (CSIRO)** de Australia.</p>
+        <p>Este dataset recopila información experimental obtenida a partir de las pruebas realizadas al robot DyRET (Dynamic Robot for Embodied Testing).</p>
+        <h4>Técnicas de análisis utilizadas:</h4>
+        <h4>Herramientas tecnológicas:</h4>
+        <ul>
+            <li>Python</li>
+            <li>Seaborn</li>
+            <li>Pandas</li>
+            <li>Matplotlib.pyplot</li>    
+            <li>Streamlit</li>
+            <li>Folium</li>
+            <li>Streamlit.components.v1</li>
+        </ul>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.divider()
 
 
 #TITULO PRINCIPAL
 st.markdown(
     """
-    <div style="text-align: center; padding: 5px;">
-        <h1 style="color:#701705;">📊 Proyecto de Análisis de Datos grupo #1</h1>
-        <h4 style="margin-top: -5px;">DyRET Legged Robot Terrain Classification Dataset</h4>
+    <div style="text-align: center; padding: 5px; margin-top: 50px; ">
+        <h1 style="color:#701705;margin-top: -5px;">DyRET Legged Robot Terrain Classification Dataset</h1>
         <p style="font-size:16px; margin-top: 10px;">
             <b>Fuente:</b> QCAT de CSIRO
         </p>
@@ -116,16 +193,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# st.markdown("""
-# <style>
-# div.stButton > button {
-#     display: block;
-#     margin: auto;
-# }
-# </style>
-# """, unsafe_allow_html=True)
-
-#LINK "Ir a la pagina principal"
+#Boton con link
 st.markdown(
     """
     <div style="text-align: center;">
@@ -149,11 +217,13 @@ st.markdown(
 st.write("")
 
 
-#Imagen australia
+
+
+#Mapa australia
 ciudad = 'Brisbane'
 latitud = -37.6167
 longitud = 134.3667
-mapa = folium.Map(location=[latitud, longitud], zoom_start=4.4)
+mapa = folium.Map(location=[latitud, longitud], zoom_start=4.4,min_zoom=4, max_zoom=18)
 
 lat=-27.4698
 log=153.0251
@@ -206,12 +276,15 @@ st.divider()
 
 #titulo Hito 2
 st.markdown("""
-    <div style="display: flex; justify-content: center">
+    <div style="display: flex; justify-content: center; margen-top:20px">
         <h1>Hitos</h1>
     </div>
  """,
  unsafe_allow_html=True
 )
+
+
+#Boton Linl
 st.markdown(
     """
     <div style="display: flex; justify-content: center; gap: 15px;">
@@ -315,4 +388,3 @@ for ax, (col, color) in zip(axes.flatten(), ejes):
 # Etiqueta común del eje X
 plt.suptitle("Fuerzas netas por pata en superficie Cesped - Velocidad 1", fontsize=16)
 st.pyplot(fig)
-
