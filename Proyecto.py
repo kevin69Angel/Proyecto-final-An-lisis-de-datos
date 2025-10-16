@@ -1,4 +1,4 @@
-import pandas as pd
+mport pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
@@ -243,51 +243,53 @@ st.markdown("""
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 40px;">
-    <div style="flex:1;text-align:justify;"
+    gap: 40px;
+    margin-top: 25px">
+    <div style="flex:1;text-align:center;"
         <p><strong style="font-size: 25px">🦾 Sensores</strong></p>
         <p style="margin-bottom:5px;">- Raw: Sensor de 3 ejes en cada pata (Optoforce OMD-20-SH-80N).</p>
         <p style="margin-bottom:30px;">- IMU: Giroscopio, acelerómetro y magnetómetro de 3 ejes (Xsens MTI-30).</p>
         <p><strong style="font-size: 25px">🌍 Superficies</strong></p>
         <p style="margin-bottom:30px;">Hormigón, césped, grava, mulch, tierra, arena.</p>
-        <p><strong style="font-size: 25px">⚙ Velocidades y pasoss</strong></p>
+        <p><strong style="font-size: 25px">⚙ Velocidades y pasos</strong></p>
         <p>- Velocidades: </p>
         <p style="margin-bottom:5px;">0–1: 0.125 Hz, 2–3: 0.1875 Hz, 4–5: 0.25 Hz.</p>
         <p style="margin-bottom:5px;">- Longitudes de paso: </p> 
         <p style="margin-bottom:30px;">0, 2, 4 → 80 mm; 1, 3, 5 → 120 mm.</p>
     </div>
-    <div style="flex:1;text-align:justify;"
+    <div style="flex:1;text-align:center;"
         <p><strong style="font-size: 25px">🧩 Metadatos</strong></p>
         <p style="margin-bottom:5px;">- Licencia: Creative Commons 4.0</p>  
         <p style="margin-bottom:5px;">- Actualizaciones: No.</p>  
-        <p style="margin-bottom:30px;">- Recolección: 10 pruebas por archivo, 8 pasos cada una, en todas las superficies y velocidades (total: 2880 pasos).</p> 
+        <p style="margin-bottom:30px;">- Recolección: 10 pruebas por archivo, 8 pasos cada una, en todas las </p>
+        <p style="margin-top:-35px;">superficies y velocidades (total: 2880 pasos).</p> 
         <p><strong style="font-size: 25px">🔬 Uso del dataset</strong></p>
         <p style="margin-bottom:5px;">- Validación de modelos cinemáticos/dinámicos.</p>  
         <p style="margin-bottom:30px;">- Clasificación de terreno mediante señales de contacto.</p>
         <p><strong style="font-size: 25px">🎯 Propósito</strong></p>
-        <p style="margin-bottom:30px;">Evaluar el rendimiento del robot DyRET según la fuerza aplicada por cada pata durante la marcha.</p>
+        <p style="margin-bottom:30px;">Evaluar el rendimiento del robot DyRET según la fuerza aplicada por cada pata</p>
+        <p style="margin-top:-35px;">durante la marcha.</p>
     </div>
 </div>
 """, unsafe_allow_html=True)
 
 
 
+
 st.divider()
 
-#titulo Hito 2
-st.markdown("""
-    <div style="display: flex; justify-content: center; margen-top:20px">
-        <h1>Hitos</h1>
-    </div>
- """,
- unsafe_allow_html=True
-)
-
-
-#Boton Linl
+#Hito 2
 st.markdown(
     """
-    <div style="display: flex; justify-content: center; gap: 15px;">
+    <div style="text-align: center; padding: 5px; margin-top: 30px; ">
+        <h1 style="color:#701705;margin-top: -5px;">Exploración Inicial de Datos en Python</h1>
+        <p style="font-size:16px; margin-top: 10px;">
+        <hr style="width:60%; margin: 20px auto;">
+        <p style="text-align: center; max-width: 700px; margin: 0 auto; font-size:16px">
+            <b>Esta fase se centra en asegurar la calidad de su dataset y en realizar un análisis exploratorio exhaustivo (EDA) para descubrir patrones, 
+            anomalías y relaciones iniciales entre las variables.<b>DyRET</b>,
+            sobre <b>6 superficies</b> y a <b>6 velocidades</b> diferentes.
+        <div style=" justify-content: center; gap: 15px;margin-top: 30px">
         <a href="https://colab.research.google.com/drive/1uczDqJNx-5RfNXIooJ5xJSgQ4Cw2fzrs" target="_blank">
             <button style="
                 background-color:#701705;
@@ -298,8 +300,27 @@ st.markdown(
                 cursor:pointer;
                 font-size:16px;
             ">
-                Ver hito #2
+               ¡Haz clik!
             </button>
+        </a>
+        </p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+#hito 3
+st.markdown(
+    """
+    <div style="text-align: center; padding: 5px; margin-top: 50px; ">
+        <h1 style="color:#701705;margin-top: -5px;">Limpieza y Exploración de Datos con Pandas</h1>
+        <p style="font-size:16px; margin-top: 10px;">
+        <hr style="width:60%; margin: 20px auto;">
+        <p style="text-align: center; max-width: 700px; margin: 0 auto; font-size:16px">
+            <b>El objetivo de esta fase es realizar un "chequeo médico" a su dataset. Necesitamos entender su estructura,
+             identificar los tipos de variables y detectar posibles problemas (como datos faltantes) desde el principio.<b>DyRET</b>,
+            sobre <b>6 superficies</b> y a <b>6 velocidades</b> diferentes.
+        <div style=" justify-content: center; gap: 15px;margin-top: 30px">
         </a>
                 <a href="https://colab.research.google.com/drive/1qRZ1FP8FBRl9PFz39juQCs_E4Itvn2lQ" target="_blank">
             <button style="
@@ -311,18 +332,22 @@ st.markdown(
                 cursor:pointer;
                 font-size:16px;
             ">
-                Ver hito #3
+                ¡Haz clik!
             </button>
-        </a>
+        </a>   
     </div>
     """,
     unsafe_allow_html=True
 )
-st.write("")
+
 st.divider()
+
+st.write("")
 st.write("")
 st.write("")
 st.write("") 
+
+
 
 
 #Titulo drataframe final
@@ -337,7 +362,7 @@ st.write()
 
 
 #Importe del dataset final
-df_proyecto=pd.read_csv('Proyecto final.csv')
+df_proyecto=pd.read_csv('df_qcat_filtrado.csv')
 
 
 
