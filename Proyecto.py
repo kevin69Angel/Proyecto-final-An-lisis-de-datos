@@ -362,7 +362,7 @@ st.write()
 
 
 #Importe del dataset final
-df_proyecto=pd.read_csv('C:\Users\PC\OneDrive\Desktop\Proyecto final análisis de datos\df_qcat_filtrado.csv')
+df_proyecto=pd.read_csv(r'C:\Users\PC\OneDrive\Desktop\Proyecto final análisis de datos\df_qcat_filtrado.csv')
 
 
 
